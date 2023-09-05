@@ -22,82 +22,70 @@ The challenge is to build quiz game app, where users will be given multiple choi
 
 The design and layout of the website is totally up to you (feel free to use any UI libraries), though you will be judged on the look, feel, and usability of your application, so do your best to respect best practices in web design.
 
-For this challenge, we will be using the [Open Trivia Databse API](https://opentdb.com/), which creates a deck of cards for you, gives you a `deck_id`, and keeps track of which cards are left as you draw cards.
+For this challenge, we will be using the [Open Trivia Databse API](https://opentdb.com/), which provides a list of random questions using the amount, difficulty, type, and category parameters.
+
+## Api Documentation
+For reference, here is the [link](https://opentdb.com/api_config.php) to the full API docs, however this section will cover the basic information you will need to make requests
+
+### Base URL
+`https://opentdb.com/api.php`
+
+### Query Parameters
+| Param      | Description                                            | Available Options                                     | Example         |
+|------------|--------------------------------------------------------|-------------------------------------------------------|-----------------|
+| amount     | Number of questions to return                          | Any positive integer                                  | amount=3        |
+| difficulty | Difficulty ranging from easy, medium, hard             | easy, medium, hard                                    | difficulty=easy |
+| type       | Type of question, either multiple choice or true/false | multiple, boolean                                     | type=boolean    |
+| category   | Integer mapping to the category of questions           | Refer to full docs, we will use General Knowledge = 9 | category=9      |
+
+
+### Example GET Requests
+10 questions of any difficulty and type from the General Knowledge category
+
+`https://opentdb.com/api.php?amount=10&category=9`
+
+5 easy multiple choice questions from any category
+
+`https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple`
+
 
 ## Goals
 This challenge has multiple goals that increase in level of difficulty, implement as many of these goals as you are able to.
 
+
 ### Goal 1
-Fetch a new deck of cards from the API, and print the response to the console
-
-URL: `https://www.deckofcardsapi.com/api/deck/new/`
-
-Example Response:
-```json
-{
-    "success": true,
-    "deck_id": "3p40paa87x90",
-    "shuffled": false,
-    "remaining": 52
-}
-```
+Fetch an easy, **true/false**, general knowledge question from the API, and print the response to the console
 
 
 ### Goal 2
 
-Ask the user if the next card will be Red or Black. You can use any input element for this, ex text input, buttons, dropdown
+Display the question to the user, and allow them to select between the true and false options using whichever UI elements you think are best suited.
 
 
 ### Goal 3
+If the user choses the correct answer, give them a success message, and the option to move on to the next stage of the game.
 
-Once they input their answer, draw a card from your deck using the API (as seen below) and check if they are correct or incorrect:
-
-URL: `https://www.deckofcardsapi.com/api/deck/YOURDECKIDHERE/draw/?count=1`
-
-Example Response:
-```json
-{
-    "success": true, 
-    "deck_id": "kxozasf3edqu", 
-    "cards": [
-        {
-            "code": "5S", 
-            "image": "https://deckofcardsapi.com/static/img/5S.png", 
-            "images": {
-                          "svg": "https://deckofcardsapi.com/static/img/5S.svg", 
-                          "png": "https://deckofcardsapi.com/static/img/5S.png"
-                      }, 
-            "value": "5", 
-            "suit": "SPADES"
-        }
-    ], 
-    "remaining": 50
-}
-
-```
+If they chose the incorrect answer, give them a failure message and have them restart the game.
 
 ### Goal 4
 
-If the user guessed incorrectly, give them a message informing them, and then give them the option to restart the game from Goal 1 with a new deck.
+Now fetch an easy **multiple choice** question from the general knowledge category. 
 
-If the user guessed correctly, give them a success message, and the option to move on to the next stage of the game
+Display the question on the screen for the user, and allow them to select their answer with whichever UI elements you think are best suited 
 
 ### Goal 5
 
-Ask the user if the next card will be higher, lower, or equal to the first card. Again, you can use any input element for this, ex text input, buttons, dropdown.
+If the user choses the correct answer, give them a success message, and the option to move on to the next stage of the game.
 
-Then repeat steps 3 & 4 (draw a card and validate)
+If they chose the incorrect answer, give them a failure message and have them restart the game.
 
 ### Goal 6
 
-Ask the user if the next card will be Hearts, Diamonds, Clubs, or Spades. 
-Again, you can use any input element for this, ex text input, buttons, dropdown.
-
-Then repeat steps 3 & 4 (draw a card and validate)
+Repeat with goals 1-5 with medium, and then hard questions
 
 ### Goal 7
 
-Build a nice congratulations page for users who won!
+Build a nice congratulations page for users who won your quiz game!
 
 ## Your solution
 
@@ -120,7 +108,7 @@ You will be evaluated on:
 
 Please submit your solution in the 2023 Fall interview GitHub repository via GitHub Issue.
 
-1. Navigate to the following link (https://github.com/AES-Outreach/Fall-2023-Coop-Interviews/issues/new/choose) or:
+1. Navigate to the following link (https://github.com/AES-Outreach/Winter-2024-Coop-Interviews/issues/new/choose) or:
    1. Navigate to the challenge repository
    2. Click **Issues**
    3. Click **New Issue**
@@ -130,12 +118,12 @@ Please submit your solution in the 2023 Fall interview GitHub repository via Git
 5. Click **Submit New Issue**
 6. Done! Thank you for completing the challenge, we look forward to discussing your solution with you during the interview. 🎉
 
-If you have any questions, you can email Alexandre Séguin at asegui8@uottawa.ca
+If you have any questions, you can email Ivana Erlich at ierlich@uottawa.ca
 
 
 ## Bonus Challenges
 If you're done and looking for more challenges, try these out:
 
-- Make your UI responsive, that is usable on all screen sizes
+- Give the user 3 lives instead of immediate failure
 - Add animations
-- Keep track of how many games the user has won or lost
+- Use session tokens from the API docs to ensure duplicate questions are never asked
