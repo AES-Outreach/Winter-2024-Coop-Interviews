@@ -40,13 +40,23 @@ For reference, here is the [link](https://opentdb.com/api_config.php) to the ful
 
 
 ### Example GET Requests
-10 questions of any difficulty and type from the General Knowledge category
+2 questions of any difficulty and type from the General Knowledge category
 
-`https://opentdb.com/api.php?amount=10&category=9`
+Request URL: `https://opentdb.com/api.php?amount=3&category=9`
 
-5 easy multiple choice questions from any category
+Sample Response:
+```
+{"response_code":0,"results":[{"category":"General Knowledge","type":"multiple","difficulty":"medium","question":"A doctor with a PhD is a doctor of what?","correct_answer":"Philosophy","incorrect_answers":["Psychology","Phrenology","Physical Therapy"]},{"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"What do the letters in the GMT time zone stand for?","correct_answer":"Greenwich Mean Time","incorrect_answers":["Global Meridian Time","General Median Time","Glasgow Man Time"]}]}
+```
 
-`https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple`
+1 easy multiple choice question from any category
+
+Request URL: `https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple`
+
+Sample Response:
+```
+{"response_code":0,"results":[{"category":"Sports","type":"multiple","difficulty":"easy","question":"What team won the 2016 MLS Cup?","correct_answer":"Seattle Sounders","incorrect_answers":["Colorado Rapids","Toronto FC","Montreal Impact"]}]}
+```
 
 
 ## Goals
