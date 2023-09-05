@@ -14,15 +14,15 @@
 
 # OutStem Front-end Challenge
 
-Welcome to the OutStem front-end challenge. Submission instructions are listed below. The deadline to submit this challenge is **Tuesday May 23rd, 9:00 AM**. We would like to emphasize that we are looking for effort, and that the challenge is just part of our discussion with you during the interview, so don’t worry if your solution is *hacky* or even if it doesn’t work, we want to see it!
+Welcome to the OutStem front-end challenge. Submission instructions are listed below. The deadline to submit this challenge is **Monday September 25th, 9:00 AM**. We would like to emphasize that we are looking for effort, and that the challenge is just part of our discussion with you during the interview, so don’t worry if your solution is *hacky* or even if it doesn’t work, we want to see it!
 
 ## The Challenge
 
-The challenge is to build a fun card game app, where users will be given cards from a [standard deck of playing cards](https://en.wikipedia.org/wiki/Standard_52-card_deck), and make guesses about the next card that will be drawn. 
+The challenge is to build quiz game app, where users will be given multiple choice and true/false questions of increasing difficulty from a variety of categories. 
 
 The design and layout of the website is totally up to you (feel free to use any UI libraries), though you will be judged on the look, feel, and usability of your application, so do your best to respect best practices in web design.
 
-For this challenge, we will be using the [Deck of Cards API](https://www.deckofcardsapi.com/), which creates a deck of cards for you, gives you a `deck_id`, and keeps track of which cards are left as you draw cards.
+For this challenge, we will be using the [Open Trivia Databse API](https://opentdb.com/), which creates a deck of cards for you, gives you a `deck_id`, and keeps track of which cards are left as you draw cards.
 
 ## Goals
 This challenge has multiple goals that increase in level of difficulty, implement as many of these goals as you are able to.
