@@ -5,7 +5,7 @@
     <img src="outstem_logo_icon.svg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">OutStem Fall 2023 Coding Challenge</h3>
+  <h3 align="center">OutStem Winter 2024 Coding Challenge</h3>
 
   <p align="center">
     Welcome to the OutStem coding interview.
@@ -18,7 +18,7 @@ Welcome to the OutStem front-end challenge. Submission instructions are listed b
 
 ## The Challenge
 
-The challenge is to build quiz game app, where users will be given multiple choice and true/false questions of increasing difficulty from a variety of categories. 
+The challenge is to build a Trivia game app, where users will be given multiple choice and true/false questions of increasing difficulty.
 
 The design and layout of the website is totally up to you (feel free to use any UI libraries), though you will be judged on the look, feel, and usability of your application, so do your best to respect best practices in web design.
 
@@ -30,7 +30,7 @@ For reference, here is the [link](https://opentdb.com/api_config.php) to the ful
 ### Base URL
 `https://opentdb.com/api.php`
 
-### Query Parameters
+### Query Parameters for GET
 | Param      | Description                                            | Available Options                                     | Example         |
 |------------|--------------------------------------------------------|-------------------------------------------------------|-----------------|
 | amount     | Number of questions to return                          | Any positive integer                                  | amount=3        |
@@ -59,7 +59,7 @@ Fetch an easy, **true/false**, general knowledge question from the API, and prin
 
 ### Goal 2
 
-Display the question to the user, and allow them to select between the true and false options using whichever UI elements you think are best suited.
+Instead of printing to the console, display the question to the user, and allow them to select between the true and false options using whichever UI elements you think are best suited.
 
 
 ### Goal 3
@@ -87,11 +87,20 @@ Repeat with goals 1-5 with medium, and then hard questions
 
 Build a nice congratulations page for users who won your quiz game!
 
+## Bonus Challenges
+If you're done and looking for more challenges, try these out:
+
+- Give the user 2 extra lives instead of ending the game on the first failure
+- Add animations!
+- Allow the user to select different categories for the game
+- Use session tokens from the API docs to ensure duplicate questions are never given to the user
+
+
 ## Your solution
 
 Here are the requirements for your solution.
 
-1. You can complete this challenge using any front end framework of your choice, however, we prefer to see you do this challenge in JavaScript/TypeScript and Angular.
+1. You can complete this challenge using any front end framework of your choice, however, we prefer to see you do this challenge in JavaScript/TypeScript and either Angular or React.
 2. Your solution submission should indicate which goals you've achieved
 4. You must submit your solution in a GitHub repository or a Repl.it. **Please make sure your project/repository is public and accessible by us.**
 
@@ -121,9 +130,4 @@ Please submit your solution in the 2023 Fall interview GitHub repository via Git
 If you have any questions, you can email Ivana Erlich at ierlich@uottawa.ca
 
 
-## Bonus Challenges
-If you're done and looking for more challenges, try these out:
 
-- Give the user 3 lives instead of immediate failure
-- Add animations
-- Use session tokens from the API docs to ensure duplicate questions are never asked
