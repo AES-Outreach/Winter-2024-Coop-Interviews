@@ -113,7 +113,7 @@ Instead of printing to the console, display the question to the user, and allow 
 ### Goal 3
 If the user choses the correct answer, give them a success message, and the option to move on to the next stage of the game.
 
-If they chose the incorrect answer, give them a failure message and have them restart the game.
+If they chose the incorrect answer, give them a failure message including what the correct answer was, and have them restart the game.
 
 ### Goal 4
 
@@ -125,7 +125,7 @@ Display the question on the screen for the user, and allow them to select their 
 
 If the user choses the correct answer, give them a success message, and the option to move on to the next stage of the game.
 
-If they chose the incorrect answer, give them a failure message and have them restart the game.
+If they chose the incorrect answer, give them a failure message including what the correct answer was, and have them restart the game.
 
 ### Goal 6
 
