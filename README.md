@@ -45,8 +45,33 @@ For reference, here is the [link](https://opentdb.com/api_config.php) to the ful
 Request URL: `https://opentdb.com/api.php?amount=3&category=9`
 
 Sample Response:
-```
-{"response_code":0,"results":[{"category":"General Knowledge","type":"multiple","difficulty":"medium","question":"A doctor with a PhD is a doctor of what?","correct_answer":"Philosophy","incorrect_answers":["Psychology","Phrenology","Physical Therapy"]},{"category":"General Knowledge","type":"multiple","difficulty":"easy","question":"What do the letters in the GMT time zone stand for?","correct_answer":"Greenwich Mean Time","incorrect_answers":["Global Meridian Time","General Median Time","Glasgow Man Time"]}]}
+```json
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "A doctor with a PhD is a doctor of what?",
+      "correct_answer": "Philosophy",
+      "incorrect_answers": ["Psychology", "Phrenology", "Physical Therapy"]
+    },
+    {
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What do the letters in the GMT time zone stand for?",
+      "correct_answer": "Greenwich Mean Time",
+      "incorrect_answers": [
+        "Global Meridian Time",
+        "General Median Time",
+        "Glasgow Man Time"
+      ]
+    }
+  ]
+}
+
 ```
 
 1 easy multiple choice question from any category
@@ -54,8 +79,21 @@ Sample Response:
 Request URL: `https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple`
 
 Sample Response:
-```
-{"response_code":0,"results":[{"category":"Sports","type":"multiple","difficulty":"easy","question":"What team won the 2016 MLS Cup?","correct_answer":"Seattle Sounders","incorrect_answers":["Colorado Rapids","Toronto FC","Montreal Impact"]}]}
+```json
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What team won the 2016 MLS Cup?",
+      "correct_answer": "Seattle Sounders",
+      "incorrect_answers": ["Colorado Rapids", "Toronto FC", "Montreal Impact"]
+    }
+  ]
+}
+
 ```
 
 
