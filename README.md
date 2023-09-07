@@ -98,12 +98,12 @@ Repeat with goals 1-5 with medium, and then hard questions
 Build a nice congratulations page for users who won your quiz game!
 
 ## Bonus Challenges
-If you're done and looking for more challenges, try these out:
+If you're done and looking for more challenges, here are some extra ideas!:
 
 - Give the user 2 extra lives instead of ending the game on the first failure
-- Add animations!
+- Add a points system for different question difficulties
 - Allow the user to select different categories for the game
-- Use session tokens from the API docs to ensure duplicate questions are never given to the user
+- Add animations!
 
 
 ## Your solution
