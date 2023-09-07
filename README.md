@@ -42,7 +42,7 @@ For reference, here is the [link](https://opentdb.com/api_config.php) to the ful
 ### Example GET Requests
 2 questions of any difficulty and type from the General Knowledge category
 
-Request URL: `https://opentdb.com/api.php?amount=3&category=9`
+Request URL: `https://opentdb.com/api.php?amount=2&category=9`
 
 Sample Response:
 ```json
@@ -76,7 +76,7 @@ Sample Response:
 
 1 easy multiple choice question from any category
 
-Request URL: `https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple`
+Request URL: `https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple`
 
 Sample Response:
 ```json
